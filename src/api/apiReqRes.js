@@ -3,7 +3,7 @@ import axios from 'axios';
 const apiReqRes = axios.create({
   baseURL: 'https://reqres.in/api',
   headers: {
-    'x-api-key': 'sreqres_937160fa6b4f4a93905dcc43df3c8009',
+    'x-api-key': import.meta.env.VITE_API_KEY,
   },
 });
 

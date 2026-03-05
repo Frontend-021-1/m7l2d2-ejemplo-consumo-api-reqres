@@ -18,7 +18,11 @@ await fetchProducts()
 </script>
 
 <template>
-  <div>
+  <div v-if="errorMessage">
+    <h2>Error al obtener productos</h2>
+    <p class="text-danger">{{ errorMessage }}</p>
+  </div>
+  <div v-else>
     <h2>Productos de api ReqRes</h2>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-3">
       <div class="col" v-for="product in products" :key="product.id">
